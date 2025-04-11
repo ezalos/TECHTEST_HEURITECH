@@ -40,12 +40,15 @@ export SNOWFLAKE_SCHEMA="TECHTEST"
 
 2. Download dataset :
 
+It takes 3 minutes to run on my machine
 
 ```sh
 uv run python -m src download_dataset
 ```
 
 3. Process and clean the dataset:
+
+The process is a bit long, it takes 6 minutes to run on my computer.
 
 ```sh
 uv run python -m src data_preparation
