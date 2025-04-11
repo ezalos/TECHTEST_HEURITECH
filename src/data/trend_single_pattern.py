@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 
 def save_trends(pattern_df, pattern_names, period):
-    SAVE_DIR = "data/1_interim/simple_trends"
+    SAVE_DIR = "data/1_interim/simple_trends/pattern"
     os.makedirs(SAVE_DIR, exist_ok=True)
     for pattern in pattern_names:
         pattern_users = pattern_df[pattern_df["LABEL_NAME"] == pattern][

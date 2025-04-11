@@ -82,7 +82,6 @@ def add_author_feature_from_post_aggregate(
     return df_merged_authors
 
 
-
 def add_post_feature_has_sport_item(df_merged_posts: pd.DataFrame) -> pd.DataFrame:
     print("Adding has_sport_item feature")
     with open("data/stored/unique_labels_by_type.json", "r", encoding="utf-8") as f:
@@ -197,22 +196,28 @@ def data_preparation_extend_raw_data():
 
     SAVE_DIR = "data/1_interim/extended_data"
     os.makedirs(SAVE_DIR, exist_ok=True)
+    os.makedirs(os.path.join(SAVE_DIR, "filtered"), exist_ok=True)
 
     print("Saving dataframes")
     df_merged_authors.to_parquet(os.path.join(SAVE_DIR, "merged_authors_extended.parquet"))
+    print("merged_authors_extended.parquet saved")
     df_images_labels.to_parquet(os.path.join(SAVE_DIR, "images_labels_extended.parquet"))
+    print("images_labels_extended.parquet saved")
     df_images_of_posts.to_parquet(os.path.join(SAVE_DIR, "images_of_posts_extended.parquet"))
+    print("images_of_posts_extended.parquet saved")
     df_merged_posts.to_parquet(os.path.join(SAVE_DIR, "merged_posts_extended.parquet"))
+    print("merged_posts_extended.parquet saved")
     df_merged_posts_only_clothing.to_parquet(
         os.path.join(
             SAVE_DIR, "filtered", "merged_posts_extended_only_clothing.parquet"
         )
     )
+    print("merged_posts_extended_only_clothing.parquet saved")
     df_merged_posts_only_clothing_and_sport.to_parquet(
         os.path.join(
             SAVE_DIR, "filtered", "merged_posts_extended_only_clothing_and_sport.parquet"
         )
     )
+    print("merged_posts_extended_only_clothing_and_sport.parquet saved")
     print(f"All dataframes saved to {SAVE_DIR = }")
 
-    return df_images_labels
