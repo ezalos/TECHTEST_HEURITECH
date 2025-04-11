@@ -1,0 +1,10 @@
+data/*
+!data/0_raw/.gitkeep
+!data/stored/unique_labels_by_type.json
+
+**/__pycache__
+.venv
+.envrc
+notebooks
+
+drafts/
