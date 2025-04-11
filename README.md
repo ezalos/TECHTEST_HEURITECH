@@ -42,13 +42,13 @@ export SNOWFLAKE_SCHEMA="TECHTEST"
 
 
 ```sh
-uv run python -m download_dataset
+uv run python -m src download_dataset
 ```
 
 3. Process and clean the dataset:
 
 ```sh
-uv run python -m data_preparation
+uv run python -m src data_preparation
 ```
 
 ## Running the Test
