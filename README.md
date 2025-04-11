@@ -54,6 +54,10 @@ The process is a bit long, it takes 6 minutes to run on my computer.
 uv run python -m src data_preparation
 ```
 
+Disclaimer:
+
+	I'm conscious that part of my feature engineering might be too costly (either in RAM requirements or in processing time) to go into production. Unfortunately, to facilitate my exploration of this new subject, the ease and flexibility to try ideas quickly was often a conflicting objective with optimization. To avoid premature optimization before finding great techniques, I only kept this requirement for evaluating the quality of segmentation groups. I hope that's okay.
+
 ## Running the Test
 
 Launch a Jupyter kernel with the uv virtual environment (python path is `.venv/bin/python`) and open `./technical_test.ipynb` to view the test results.
